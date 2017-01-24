@@ -11,7 +11,7 @@ namespace cis237inclass1
         static void Main(string[] args)
         {
             //Make a new instance of he User Interface Class
-            UserInterface ui = new UserInterface();
+            //UserInterface ui = new UserInterface();
 
             //Here is a new employee being created using the default constructors
             //we wrote in he Employee class
@@ -40,7 +40,7 @@ namespace cis237inclass1
             csvProcessor.ImportCsv(pathToCsv, employees);
 
             //Get input fromt he user
-            int choice = ui.GetUserInput();
+            int choice = StaticUserInterface.GetUserInput();
 
             //While the choice is not 2, continue to do work
             while (choice != 2)
@@ -63,12 +63,12 @@ namespace cis237inclass1
                     }
 
                     //use the UI class to print out the string
-                    ui.Output(outputString);
+                    StaticUserInterface.Output(outputString);
 
                 }
 
                 //re-prompt the user for input
-                choice = ui.GetUserInput();
+                choice = StaticUserInterface.GetUserInput();
             }
 
 
